@@ -1,0 +1,35 @@
+def create_list
+  print "what would you like to call the list?"
+  name = gets.chomp
+  hash = { "name" => name, "items" => Array.new}
+  return hash 
+end 
+
+def add_list_items 
+  print "what would you like to add it this list?"
+item_name = gets.chomp
+  
+  print "how much do you want to add?"
+  amount = gets.chomp.to_i
+hash = { "name" => item_name, "amount" => amount}
+  return hash 
+end 
+
+def print_list(list)
+  puts "List: #{list['name']}"
+  puts '-----'
+
+list["items"].each do |item|
+  puts "iteam: " + item['name']
+  puts "Amount: " + item['amount'].to_s
+  puts "----"
+end 
+end 
+
+list = create_list()
+list ['items'].push(add_list_items())
+print_list(list)
+
+
+  
+
