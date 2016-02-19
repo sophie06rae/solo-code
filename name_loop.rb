@@ -8,7 +8,7 @@ def get_name
     if name.length >2 && !name.index(/\d/)
       break 
       else 
-      print "error please re enter your name"
+      print "error"
    end 
    end 
     return name
