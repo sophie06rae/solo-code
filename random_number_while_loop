@@ -1,0 +1,11 @@
+random_number = Random.new.rand(5)
+answer = " "
+while answer.to_i != random_number
+  puts "Guess a number between 1 and 5"
+  answer = gets.chomp
+  if answer.to_i == random_number
+    puts "you guessed correct!"
+    else
+    puts "try again!"
+    end
+  end
